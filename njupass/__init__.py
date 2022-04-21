@@ -24,9 +24,10 @@ class NjuUiaAuth:
     """
 
     def __init__(self):
+        randomStr = str(time.time())
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': "cpdaily"
+            'User-Agent': randomStr + "cpdaily"
         })
 
         r = self.session.get(URL_NJU_UIA_AUTH)
