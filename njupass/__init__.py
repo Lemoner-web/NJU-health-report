@@ -27,7 +27,7 @@ class NjuUiaAuth:
         randomStr = str(time.time())
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" + randomStr + "cpdaily"
+            'User-Agent': randomStr + "cpdaily"
         })
 
         r = self.session.get(URL_NJU_UIA_AUTH)
